@@ -1,0 +1,15 @@
+<nav>
+    <div class="nav-bar">
+      <span>Welcome, {{username}}!</span>
+      <button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="chart">
+      <app-show-selected-chart [selectedChart]="selectedChart"></app-show-selected-chart>
+    </div>
+    <div class="buttons" *ngFor="let button of buttons">
+      <button class="button" (click)="updateSelectedChart(button.statName)">{{button.text}}</button>
+    </div>
+  </div>
